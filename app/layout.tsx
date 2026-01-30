@@ -1,56 +1,21 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 
-// Configure Ivy Mode (Serif)
-const ivyMode = localFont({
-  src: [
-    {
-      path: './fonts/IvyMode-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/IvyMode-SemiBold.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: './fonts/IvyMode-Light.woff2',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './fonts/IvyMode-Italic.woff2',
-      weight: '400',
-      style: 'italic',
-    }
-  ],
-  variable: '--font-ivy-mode',
-  display: 'swap',
+// Use Google Fonts as closest free alternatives to Ivy Mode/Epic
+// Ivy Mode (Serif) -> Playfair Display
+const playfair = Playfair_Display({
+  variable: "--font-ivy-mode",
+  subsets: ["latin"],
+  display: "swap",
 });
 
-// Configure Ivy Epic (Sans-serif)
-const ivyEpic = localFont({
-  src: [
-    {
-      path: './fonts/IvyEpic-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/IvyEpic-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './fonts/IvyEpic-Light.woff2',
-      weight: '300',
-      style: 'normal',
-    }
-  ],
-  variable: '--font-ivy-epic',
-  display: 'swap',
+// Ivy Epic (Sans-serif) -> Lato
+const lato = Lato({
+  variable: "--font-ivy-epic",
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -66,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ivyMode.variable} ${ivyEpic.variable} antialiased bg-white text-bh-slate font-sans`}
+        className={`${playfair.variable} ${lato.variable} antialiased bg-white text-bh-slate font-sans`}
       >
         {children}
       </body>
