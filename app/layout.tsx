@@ -6,22 +6,22 @@ import "./globals.css";
 const ivyMode = localFont({
   src: [
     {
-      path: '../public/fonts/IvyMode-Regular.woff2',
+      path: './fonts/IvyMode-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/IvyMode-SemiBold.woff2',
+      path: './fonts/IvyMode-SemiBold.woff2',
       weight: '600',
       style: 'normal',
     },
     {
-      path: '../public/fonts/IvyMode-Light.woff2',
+      path: './fonts/IvyMode-Light.woff2',
       weight: '300',
       style: 'normal',
     },
     {
-      path: '../public/fonts/IvyMode-Italic.woff2',
+      path: './fonts/IvyMode-Italic.woff2',
       weight: '400',
       style: 'italic',
     }
@@ -34,17 +34,17 @@ const ivyMode = localFont({
 const ivyEpic = localFont({
   src: [
     {
-      path: '../public/fonts/IvyEpic-Regular.woff2',
+      path: './fonts/IvyEpic-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/IvyEpic-Bold.woff2',
+      path: './fonts/IvyEpic-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../public/fonts/IvyEpic-Light.woff2',
+      path: './fonts/IvyEpic-Light.woff2',
       weight: '300',
       style: 'normal',
     }
