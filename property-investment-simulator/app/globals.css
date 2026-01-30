@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bh-slate: #1F343F;
+  --color-bh-denim: #2C537A;
+  --color-bh-salmon: #FF787A;
+  --color-bh-powder: #7BA0B2;
+  --color-bh-mist: #EDE8E4;
+  --color-bh-sand: #D9B9A0;
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1F343F;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
