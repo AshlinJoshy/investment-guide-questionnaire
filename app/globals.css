@@ -8,8 +8,8 @@
   --color-bh-mist: #EDE8E4;
   --color-bh-sand: #D9B9A0;
 
-  --font-serif: var(--font-serif);
-  --font-sans: var(--font-sans);
+  --font-serif: var(--font-ivy-mode);
+  --font-sans: var(--font-ivy-epic);
 }
 
 :root {

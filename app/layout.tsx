@@ -1,18 +1,56 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  display: "swap",
+// Configure Ivy Mode (Serif)
+const ivyMode = localFont({
+  src: [
+    {
+      path: '../public/fonts/IvyMode-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/IvyMode-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/IvyMode-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/IvyMode-Italic.woff2',
+      weight: '400',
+      style: 'italic',
+    }
+  ],
+  variable: '--font-ivy-mode',
+  display: 'swap',
 });
 
-const lato = Lato({
-  variable: "--font-sans",
-  weight: ["300", "400", "700"],
-  subsets: ["latin"],
-  display: "swap",
+// Configure Ivy Epic (Sans-serif)
+const ivyEpic = localFont({
+  src: [
+    {
+      path: '../public/fonts/IvyEpic-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/IvyEpic-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/IvyEpic-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-ivy-epic',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -28,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${lato.variable} antialiased bg-white text-slate-900 font-sans`}
+        className={`${ivyMode.variable} ${ivyEpic.variable} antialiased bg-white text-bh-slate font-sans`}
       >
         {children}
       </body>
